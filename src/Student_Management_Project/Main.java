@@ -55,8 +55,10 @@ public class Main {
 
             }
             if (choice == 4) {
-                System.out.println("Delete Student functionality is not implemented yet.");
-                break;
+                System.out.println("Enter Student Id to delete record : ");
+                int id = sc.nextInt();
+                StudentDAO dao = new StudentDAO();
+                dao.deleteRecord(id);
             }
             if(choice == 5) {
                 System.out.println("Exiting the system. Thank you!");
