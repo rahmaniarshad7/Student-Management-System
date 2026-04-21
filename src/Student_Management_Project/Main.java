@@ -7,6 +7,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         while(true){
+            System.out.println();
+            System.out.println();
             System.out.println("=====Student Management System=====");
             System.out.println("Select Choice : ");
             System.out.println("1. Add Student");
@@ -14,6 +16,8 @@ public class Main {
             System.out.println("3. Update Student");
             System.out.println("4. Delete Student");
             System.out.println("5. Exit");
+            System.out.println();
+            System.out.println();
 
             System.out.print("Enter choice between 1 - 5 : ");
             int choice = sc.nextInt();
