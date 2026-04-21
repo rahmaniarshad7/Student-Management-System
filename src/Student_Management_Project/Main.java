@@ -15,9 +15,36 @@ public class Main {
             System.out.println("4. Delete Student");
             System.out.println("5. Exit");
 
+            System.out.print("Enter choice between 1 - 5 : ");
             int choice = sc.nextInt();
-            System.out.println("You Selected : " + choice);
+            sc.nextLine();
 
+            if (choice == 1) {
+                System.out.println("Enter Student Id : ");
+                int id = sc.nextInt();
+                System.out.println("Enter Student Name : ");
+                String name = sc.next();
+                System.out.println("Enter Student Age : ");
+                int age = sc.nextInt();
+                System.out.println("Enter Student Marks : ");
+                double marks = sc.nextDouble();
+                System.out.println("Enter Student Course : ");
+                String course = sc.next();
+                System.out.println("Enter Student Address : ");
+                String address = sc.next();
+                Student s = new Student(id, name, age, marks, course, address);
+                StudentDAO dao = new StudentDAO();
+                dao.addStudent(s);
+            }
+            if (choice == 2) {
+                System.out.println("View Student functionality is not implemented yet.");
+            }
+            if (choice == 3) {
+                System.out.println("Update Student functionality is not implemented yet.");
+            }
+            if (choice == 4) {
+                System.out.println("Delete Student functionality is not implemented yet.");
+            }
             if(choice == 5) {
                 System.out.println("Exiting the system. Thank you!");
                 break;

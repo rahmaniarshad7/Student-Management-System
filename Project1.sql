@@ -10,3 +10,4 @@ create table Student(
     Course varchar(50) not null,
     Address varchar(100) not null
 );
+alter table Student MODIFY Id int;
