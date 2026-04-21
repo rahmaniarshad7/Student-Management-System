@@ -35,15 +35,19 @@ public class Main {
                 Student s = new Student(id, name, age, marks, course, address);
                 StudentDAO dao = new StudentDAO();
                 dao.addStudent(s);
+                //break;
             }
             if (choice == 2) {
                 System.out.println("View Student functionality is not implemented yet.");
+                //break;
             }
             if (choice == 3) {
                 System.out.println("Update Student functionality is not implemented yet.");
+                break;
             }
             if (choice == 4) {
                 System.out.println("Delete Student functionality is not implemented yet.");
+                break;
             }
             if(choice == 5) {
                 System.out.println("Exiting the system. Thank you!");
