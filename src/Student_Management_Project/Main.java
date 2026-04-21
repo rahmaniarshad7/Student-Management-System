@@ -38,7 +38,10 @@ public class Main {
                 //break;
             }
             if (choice == 2) {
-                System.out.println("View Student functionality is not implemented yet.");
+                System.out.println("Enter Student Id to view details : ");
+                int id = sc.nextInt();
+                StudentDAO dao = new StudentDAO();
+                dao.viewStudent(id);
                 //break;
             }
             if (choice == 3) {

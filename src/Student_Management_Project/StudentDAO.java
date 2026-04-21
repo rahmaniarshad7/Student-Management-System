@@ -2,6 +2,7 @@ package Student_Management_Project;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class StudentDAO {
@@ -21,6 +22,36 @@ public class StudentDAO {
             System.out.println("Student added successfully!");
 
             conn.close();
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public void viewStudent(int id){
+        try{
+            Connection conn = DBConnection.getConnection();
+            String query = "SELECT * FROM Student WHERE Id = ?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                int stuId = rs.getInt("Id");
+                String name = rs.getString("Name");
+                int age = rs.getInt("Age");
+                double marks = rs.getDouble("Marks");
+                String course = rs.getString("Course");
+                String address = rs.getString("Address");
+
+                System.out.println("Student Id : " + stuId);
+                System.out.println("Student Name : " + name);
+                System.out.println("Student Age : " + age);
+                System.out.println("Student Marks : " + marks);
+                System.out.println("Student Course : " + course);
+                System.out.println("Student Address : " + address);
+            }
+            conn.close();
+            rs.close();
 
         } catch (Exception e){
             System.out.println(e.getMessage());
