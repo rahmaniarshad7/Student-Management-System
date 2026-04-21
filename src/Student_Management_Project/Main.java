@@ -38,15 +38,21 @@ public class Main {
                 //break;
             }
             if (choice == 2) {
-                System.out.println("Enter Student Id to view details : ");
+                System.out.print("Enter Student Id to view details : ");
                 int id = sc.nextInt();
                 StudentDAO dao = new StudentDAO();
                 dao.viewStudent(id);
                 //break;
             }
             if (choice == 3) {
-                System.out.println("Update Student functionality is not implemented yet.");
-                break;
+                System.out.print("You can update only Marks of Student : ");
+                System.out.print("Enter new Marks : ");
+                double marks = sc.nextDouble();
+                System.out.print("Enter Student Id to update marks : ");
+                int id = sc.nextInt();
+                StudentDAO dao = new StudentDAO();
+                dao.updateRecord(marks, id);
+
             }
             if (choice == 4) {
                 System.out.println("Delete Student functionality is not implemented yet.");
