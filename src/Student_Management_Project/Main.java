@@ -17,7 +17,6 @@ public class Main {
             System.out.println("4. Delete Student");
             System.out.println("5. Exit");
             System.out.println();
-            System.out.println();
 
             System.out.print("Enter choice between 1 - 5 : ");
             int choice = sc.nextInt();
